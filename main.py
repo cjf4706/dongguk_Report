@@ -7,9 +7,17 @@ while True:
 		break;
 	elif (select_1 == 1):
 		print("전원이 켜집니다.")
+		print("A/B/C 기능별 동작 시간을 설정해주세요.(최대 10초)\n")
+		A_time = int(input("기능 A: (초)"))
+		if A_time > 10:
+			print("시간은 최대 10초까지 설정 가능합니다.")
+			continue;
+		elif A_time == 0:
+			print("시간은 0초 이상 설정하셔야 합니다.")
+			continue;
+		else: 
+			print("시간이 설정되었습니다. 입력된 시간은",A_time,"초 입니다.\n")
 		break;
 	else:
 		print("잘못된 입력입니다. 다시 입력해주세요.")
 		break;
-//각 문단에 Break를 적용하지 않으면 무한루프가 발생
-//WHile 문이 동작하는 조건을 수정해 봐야겠음
